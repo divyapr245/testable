@@ -36,6 +36,9 @@ jobs:
       # Add or replace database setup steps here
       - name: Set up database schema
         run: bin/rails db:schema:load
+      #t compile assets
+      - name: Compile assets
+  r     un: RAILS_ENV=test bin/webpack
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
